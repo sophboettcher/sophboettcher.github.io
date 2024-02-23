@@ -24,4 +24,23 @@
 <h2> Note on tags and elements: </h2>
 <p> I have added tags for the various headings, paragraphs, image, album link, and gif. I have also used css to alter the color, font, and spacial formatting of this webpage. I primarily based these edits off the instructions provided in our course slides but I also used ChatGPT for reference on how to add some of the more complex elements, such as the album link and adjusting certain elements on the page. I hope it is somewhat readable!</p>
 </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON API Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="activity"></div>
+
+    <script>
+        $(document).ready(function() {
+            // Make a GET request to the Bored API
+            $.get(https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=beng&api_key=REPLACE_ME, function(data) {
+                // Handle the response data
+                $('#activity').text('Random activity: ' + data.activity);
+            });
+        });
+    </script>
+</body>
 </html>
