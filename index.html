@@ -24,4 +24,47 @@
 <h2> Note on tags and elements: </h2>
 <p> I have added tags for the various headings, paragraphs, image, album link, and gif. I have also used css to alter the color, font, and spacial formatting of this webpage. I primarily based these edits off the instructions provided in our course slides but I also used ChatGPT for reference on how to add some of the more complex elements, such as the album link and adjusting certain elements on the page. I hope it is somewhat readable!</p>
 </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Images</title>
+</head>
+<body>
+    <div id="catImages"></div>
+
+    <script>
+        // Define the JSON data
+        var jsonData = [
+            {
+                "id": "LSaDk6OjY",
+                "url": "https://cdn2.thecatapi.com/images/LSaDk6OjY.jpg",
+                "width": 1080,
+                "height": 1080
+            },
+            {
+                "id": "IFXsxmXLm",
+                "url": "https://cdn2.thecatapi.com/images/IFXsxmXLm.jpg",
+                "width": 973,
+                "height": 973
+            },
+            // Add more objects as needed
+        ];
+
+        // Access the div where images will be displayed
+        var catImagesDiv = document.getElementById("catImages");
+
+        // Loop through each object in the JSON data and create an img element for each
+        jsonData.forEach(function(cat) {
+            // Create img element
+            var imgElement = document.createElement("img");
+            // Set src attribute to the image URL
+            imgElement.src = cat.url;
+            // Set width and height attributes
+            imgElement.width = cat.width;
+            imgElement.height = cat.height;
+            // Append img element to the catImagesDiv
+            catImagesDiv.appendChild(imgElement);
+        });
+    </script>
+</body>
 </html>
